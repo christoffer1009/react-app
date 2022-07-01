@@ -12,17 +12,17 @@ const Note = (props) => {
   // };
 
   return (
-    <div class='card h-96 bg-primary text-primary-content'>
-      <h2 class='card-title mt-4 mx-4'>{title}</h2>
-      <div class='card-body overflow-auto m-2'>
-        <p className>{text}</p>
+    <div className='card h-96 bg-primary text-primary-content'>
+      <h2 className='card-title mt-4 mx-4'>{title}</h2>
+      <div className='card-body overflow-auto m-2'>
+        <p>{text}</p>
       </div>
-      <div class='card-actions justify-end m-2'>
-        {/* <button class='btn btn-sm gap-2'>
+      <div className='card-actions justify-end m-2'>
+        {/* <button className='btn btn-sm gap-2'>
           <HeartStraight size={22} />
           Favoritar
         </button> */}
-        <button class='btn btn-sm gap-2'>
+        <button className='btn btn-sm gap-2'>
           <Trash size={22} />
         </button>
       </div>

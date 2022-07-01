@@ -1,29 +1,30 @@
 import { Plus } from "phosphor-react";
+import { useState } from "react";
 import NewNote from "./NewNote";
 
-const Topbar = () => {
+const Topbar = (props) => {
   return (
-    <div class='navbar bg-base-100'>
-      <div class='flex-1'>
-        <a class='btn btn-ghost normal-case text-xl'>daisyUI</a>
+    <div className='navbar bg-base-100'>
+      <div className='flex-1'>
+        <a className='btn btn-ghost normal-case text-xl'>daisyUI</a>
       </div>
-      <div class='flex-none gap-2'>
-        <div class='form-control'>
+      <div className='flex-none gap-2'>
+        <div className='form-control'>
           <input
             type='text'
             placeholder='Search'
-            class='input input-bordered'
+            className='input input-bordered'
           />
         </div>
       </div>
 
-      <label for='my-modal' class='btn modal-button btn-secondary mx-2'>
+      <label htmlFor='my-modal' className='btn modal-button btn-secondary mx-2'>
         <Plus size={28} />
       </label>
 
-      <input type='checkbox' id='my-modal' class='modal-toggle' />
-      <div class='modal'>
-        <div class='modal-box'>
+      <input type='checkbox' id='my-modal' className='modal-toggle' />
+      <div className='modal'>
+        <div className='modal-box'>
           <NewNote />
         </div>
       </div>

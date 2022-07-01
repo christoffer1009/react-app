@@ -4,12 +4,6 @@ const NewNote = (props) => {
   const [modalTitle, setModalTitle] = useState("");
   const [modalText, setModalText] = useState("");
 
-  //   const createNote = () => {};
-
-  //   const handler = (data) => {
-  //     props.newTitle(data);
-  //   };
-
   const handleTitleInput = (e) => {
     setModalTitle(e.target.value);
   };
@@ -18,35 +12,45 @@ const NewNote = (props) => {
     setModalText(e.target.value);
   };
 
+  const create = () => {
+    let data = { title: modalTitle, text: modalText };
+    console.log(data);
+  };
+
   const discard = () => {
     setModalTitle("");
     setModalText("");
+    console.log("discard");
   };
 
   return (
     <div>
-      <div class='card h-96 text-primary-content'>
+      <div className='card h-96 text-primary-content'>
         <input
           type='text'
           placeholder='Título'
-          class='input input-primary w-full max-w-xs mx-8 my-2'
+          className='input input-primary w-full max-w-xs mx-8 my-2'
           value={modalTitle}
           onChange={handleTitleInput}
         />
 
-        <div class='card-body overflow-auto '>
+        <div className='card-body overflow-auto '>
           <textarea
-            class='textarea textarea-primary h-72'
+            className='textarea textarea-primary h-72'
             placeholder='Escreva aqui...'
             value={modalText}
             onChange={handleTextInput}
           ></textarea>
         </div>
-        <div class='modal-action'>
-          <label for='my-modal' class='btn btn-primary'>
+        <div className='modal-action'>
+          <label
+            htmlFor='my-modal'
+            className='btn btn-primary'
+            onClick={create}
+          >
             Salvar
           </label>
-          <label for='my-modal' class='btn' onClick={discard}>
+          <label htmlFor='my-modal' className='btn' onClick={discard}>
             Descartar
           </label>
         </div>
